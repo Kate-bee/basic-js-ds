@@ -86,8 +86,8 @@ module.exports = class BinarySearchTree {
         let minFromRight = node.right;
         while (minFromRight.left) {
           minFromRight = minFromRight.left;
-          node.data = minFromRight.data;
         }
+        node.data = minFromRight.data;
         node.right = removeNode(node.right, minFromRight.data);
         return node;
       }
